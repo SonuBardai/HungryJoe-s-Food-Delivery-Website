@@ -1,0 +1,71 @@
+{%extends "layout.html"%}
+{%block body%}
+<section class="text-gray-400 bg-gray-900 body-font">
+    <div class="container px-5 py-24 mx-auto">
+        <div class="flex flex-col text-center w-full mb-7">
+            <h1 class="sm:text-4xl text-3xl font-medium title-font mb-2 text-white">Edit Menu</h1>
+            <div class="flex flex-row">
+                <a href="/edit/0" class="mx-5 flex mx-auto "><button
+                        class="flex mx-auto text-white bg-yellow-500 border-0 py-2 mx-5 px-8 focus:outline-none hover:bg-yellow-600 rounded text-lg">Add
+                        Item</button></a>
+                <a href="/logout" class="mx-5 flex mx-auto "><button
+                        class="flex mx-auto text-white bg-yellow-500 border-0 py-2 mx-5 px-8 focus:outline-none hover:bg-yellow-600 rounded text-lg">Logout</button></a>
+            </div>
+        </div>
+        <div class="lg:w-2/3 w-full mx-auto overflow-auto">
+            <table class="table-auto w-full text-left whitespace-no-wrap">
+                <thead>
+                    <tr>
+                        <th
+                            class="px-4 py-3 title-font tracking-wider font-medium text-white text-sm bg-gray-800 rounded-tl rounded-bl">
+                            Name</th>
+                        <th class="px-4 py-3 title-font tracking-wider font-medium text-white text-sm bg-gray-800">
+                            Description
+                        </th>
+                        <th class="px-4 py-3 title-font tracking-wider font-medium text-white text-sm bg-gray-800">
+                            Price</th>
+                        <th class="px-4 py-3 title-font tracking-wider font-medium text-white text-sm bg-gray-800">Edit
+                        </th>
+                        <th class="px-4 py-3 title-font tracking-wider font-medium text-white text-sm bg-gray-800">
+                            Delete
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {%for item in items%}
+                    <tr>
+                        <td class="px-4 py-3">{{item.name}}</td>
+                        <td class="px-4 py-3">{{item.description}}</td>
+                        <td class="px-4 py-3">{{item.price}}</td>
+                        <td class="px-4 py-3 text-lg text-white">
+                            <a href="/edit/{{item.slug}}">
+                                <button
+                                    class="flex ml-auto text-white bg-yellow-500 border-0 py-2 px-6 focus:outline-none hover:bg-yellow-600 rounded">Edit
+                                </button>
+                            </a>
+                        </td>
+                        <td class="px-4 py-3 text-lg text-white">
+                            <a href="/remove/{{item.slug}}">
+                                <button
+                                    class="flex ml-auto text-white bg-yellow-500 border-0 py-2 px-6 focus:outline-none hover:bg-yellow-600 rounded">Remove
+                                </button>
+                            </a>
+                        </td>
+                    </tr>
+                    {%endfor%}
+                </tbody>
+            </table>
+        </div>
+        <div class="flex pl-4 mt-4 lg:w-2/3 w-full mx-auto">
+            <a class="text-yellow-400 inline-flex items-center md:mb-2 lg:mb-0">Learn More
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+            </a>
+            <button
+                class="flex ml-auto text-white bg-yellow-500 border-0 py-2 px-6 focus:outline-none hover:bg-yellow-600 rounded">Button</button>
+        </div>
+    </div>
+</section>
+{%endblock%}

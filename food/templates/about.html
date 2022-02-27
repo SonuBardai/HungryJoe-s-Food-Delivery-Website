@@ -1,0 +1,31 @@
+{%extends "layout.html"%}
+{%block body%}
+<style>
+    #about-c {
+        background-image: url("{{url_for('static', filename='images/hero-bg.jpg')}}");
+    }
+</style>
+<section id="about-c" class="text-gray-400 bg-gray-900 body-font bg-left">
+    <div class="container px-5 py-10 mx-auto flex flex-col">
+        <h2 class="sm:text-3xl text-2xl text-white font-medium title-font mb-2 md:w-2/5">Hungry Joe's</h2>
+        <div class="md:w-3/5 md:pl-6">
+            <p class="leading-relaxed text-base">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate
+                temporibus nihil debitis reiciendis aspernatur aliquam numquam aliquid voluptatum eius blanditiis porro
+                possimus, voluptas error dolores eum non consectetur molestiae quam fuga, facere quae? Molestiae
+                cupiditate distinctio, iste vero possimus accusamus beatae. Eveniet esse voluptas provident. Ut, iure
+                ex. Ab veniam distinctio, quasi accusantium quo laboriosam natus laborum dolorum perferendis asperiores
+                fuga aspernatur quae modi sed? Autem excepturi porro voluptatum est. Odit a doloribus, fugiat
+                repudiandae enim quibusdam libero, molestiae laborum explicabo ex nesciunt. Quaerat molestiae veniam
+                esse tempora? Eaque dolorem sunt expedita ex vel non vero excepturi nemo praesentium aliquid ad magnam,
+                accusantium nesciunt officiis totam! Ipsum incidunt accusamus explicabo. Commodi eligendi, sapiente eum
+                earum corporis optio nulla doloribus, asperiores culpa natus in animi at dignissimos, placeat obcaecati
+                numquam? Temporibus explicabo doloremque quae recusandae voluptatibus eos libero tenetur debitis magnam
+                maiores nesciunt quibusdam quidem, numquam adipisci fugiat laboriosam itaque commodi perferendis
+                consectetur suscipit totam ea. Eum culpa rem fugit nihil numquam, facilis cumque. </p>
+        </div>
+    </div>
+</section>
+<script>
+    document.getElementById('about').classList.add('selected');
+</script>
+{%endblock%}

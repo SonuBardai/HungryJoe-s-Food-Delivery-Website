@@ -1,0 +1,9 @@
+{
+    "params": {
+        "main_name": "Hungry Joe's",
+        "title": "Dine Like A King!",
+        "database_uri": "mysql+pymysql://root:@localhost/foodflask", 
+        "admin-username": "admin",
+        "admin-password": "password"
+    }
+}
